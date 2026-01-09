@@ -1,0 +1,74 @@
+@use '../utils' as *;
+
+/*----------------------------------------*/
+/*  2.5 Buttons
+/*----------------------------------------*/
+
+.#{$theme-prifix}-btn {
+    font-weight: 600;
+    font-size: 15px;
+    letter-spacing: -0.01em;
+    text-transform: uppercase;
+    color: var(--tp-common-white);
+    background: var(--tp-theme-primary);
+    line-height: 1;
+    padding: 20px 28px;
+    display: inline-flex;
+    align-items: center;
+    gap: 20px;
+    &:hover{
+        background: var(--tp-common-mulberry);
+        color: var(--tp-common-white);
+    }
+    &-primary{
+        &-white{
+            &:hover{
+                background: var(--tp-common-white);
+                color: var(--tp-common-mulberry);
+            }
+        }
+    }
+    &-animetion{
+        & .btn-icon{
+            animation: toLeftFromRight 0.3s forwards;
+            transition: transform ease 0.3s;
+            margin-top: -3px;
+        }
+        &:hover{
+            & .btn-icon{
+                animation: toRightFromLeft 0.3s forwards;
+            }
+        }
+    }
+    &-secondary{
+        background: var(--tp-theme-secondary);
+        color: var(--tp-common-mulberry);
+        &-white{
+            background: var(--tp-theme-secondary);
+            color: var(--tp-common-mulberry);
+            &:hover{
+                background: var(--tp-theme-primary);
+                color: var(--tp-common-white);
+            }
+        }
+    }
+    &-mulberry{
+        background: var(--tp-common-mulberry);
+        color: var(--tp-common-white);
+        &:hover{
+            background: var(--tp-theme-primary);
+        }
+    }
+    &-nopading{
+        padding: 0;
+        background: none;
+        gap: 10px;
+        &:hover{
+            background: none;
+        }
+    }
+    &-donation{
+        padding: 20px 59px;
+        border-radius: 100px;
+    }
+}

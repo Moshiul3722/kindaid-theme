@@ -1,0 +1,152 @@
+@use '../../utils' as *;
+
+/*----------------------------------------*/
+/*  7.7 contact css start
+/*----------------------------------------*/
+
+.#{$theme-prifix}-contact {
+    &-form{
+        & .tp-form-label {
+            font-weight: 600;
+            font-size: 14px;
+            color: var(--tp-common-mulberry);
+            margin-bottom: 6px;
+        }
+        & .tp-input{
+            border-radius: 62px;
+            width: 100%;
+            height: 54px;
+            color: var(--tp-common-mulberry);
+            background: var(--tp-common-emerald);
+            border: none;
+            font-weight: 500;
+            font-size: 16px;
+            &::placeholder{
+                font-weight: 500;
+                font-size: 16px;
+                color: rgba(98, 0, 53, 0.5);
+            }
+        }
+        & .tp-textarea{
+            height: 160px;
+            border-radius: 24px;
+            resize: none;
+        }
+        &-border{
+            border-top: 1px solid rgba(98, 0, 53, 0.08);
+            border-bottom: 1px solid rgba(98, 0, 53, 0.08);
+        }
+        &-main{
+            @media #{$xl,$lg}{
+                margin-right: 30px;
+                margin-left: 0;
+            }
+            @media #{$md,$sm,$xs}{
+                margin-right: 12px;
+                margin-left: 12px;
+            }
+        }
+    }
+    &-remember{
+        display: flex;
+        & label{
+            font-weight: 500;
+            font-size: 16px;
+            color: var(--tp-grey-1);
+            cursor: pointer;
+        }
+        & .tp-checkbox{
+            margin: 0;
+            appearance: none;
+            -moz-appearance: none;
+            display: block;
+            width: 20px;
+            height: 20px;
+            outline: none;
+            flex : 0 0 auto;
+            background: transparent;
+            @include transform(translateY(-2.5px));
+            padding: 0;
+            margin-right: 10px;
+            transform: translateY(4px);
+            border: 1px solid rgba(98, 0, 53, 0.2);
+            border-radius: 4px;
+            &:checked{
+                position: relative;
+                background-color: var(--tp-theme-primary);
+                border-color: transparent;
+                border: 1px solid rgba(98, 0, 53, 0.2);
+                border-radius: 4px;
+                &::after{
+                    box-sizing: border-box;
+                    position: absolute;
+                    content: '\f00c';
+                    font-weight: 700;
+                    font-family: var(--tp-ff-fontawesome);
+                    font-size: 14px;
+                    color: var(--tp-common-white);
+                    top: 50%;
+                    left: 50%;
+                    @include transform(translate(-50%, -50%));       
+                }
+            }
+            &:hover{
+                cursor: pointer;
+            }
+        }
+    }
+    &-item{
+        padding: 50px 20px 40px 40px;
+        height: 100%;
+        @media #{$xl,$lg,$md,$sm,$xs}{
+            padding: 50px 20px 40px 20px;
+        }
+    }
+    &-icon{
+        width: 36px;
+        height: 36px;
+    }
+    &-content{
+        & h3{
+            font-weight: 600;
+            font-size: 24px;
+            line-height: 125%;
+            letter-spacing: -0.02em;
+        }
+        & h5{
+            font-weight: 600;
+            font-size: 24px;
+            letter-spacing: -0.02em;
+            font-family: var(--tp-ff-p);
+        }
+        & span{
+            font-weight: 500;
+            letter-spacing: -0.01em;
+            font-size: 16px;
+        }
+        & a{
+            font-weight: 600;
+            font-size: 18px;
+            letter-spacing: -0.01em;
+            color: var(--tp-common-mulberry);
+        }
+    }
+    &-map{
+        line-height: 1;
+        @media #{$lg,$md,$sm,$xs}{
+            margin-right: 0;
+        }
+        & iframe{
+            width: 100%;
+            height: 800px;
+            mix-blend-mode: luminosity;
+            line-height: 1;
+            @media #{$md,$sm}{
+                height: 600px;
+            }
+            @media #{$xs}{
+                height: 400px;
+            }
+        }
+    }
+}

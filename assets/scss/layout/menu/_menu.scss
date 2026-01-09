@@ -1,0 +1,96 @@
+@use '../../utils' as *;
+
+/*----------------------------------------*/
+/*  4.1 Main menu css
+/*----------------------------------------*/
+.#{$theme-prifix}-main {
+    &-menu{
+        & nav{
+            & ul{
+                & li{
+                    list-style: none;
+                    display: inline-block;
+                    position: relative;
+                    &:not(:last-child){
+                        margin-right: 35px;
+                    }
+                    & a{
+                        font-weight: 500;
+                        font-size: 17px;
+                        color: var(--tp-common-mulberry);
+                        padding: 39px 0px;
+                        display: inline-block;
+                        &:hover{
+                            color: var(--tp-theme-primary);
+                        }
+                    }
+                    &:hover {
+                        & > a{
+                            color: var(--tp-theme-primary);
+                        }
+                        & > .sub-menu{
+                            opacity: 1;
+                            visibility: visible;
+                            top: 100%;
+                        }
+                    }
+                    & .sub-menu {
+                        position: absolute;
+                        top: 105%;
+                        left: 0;
+                        background: var(--tp-common-emerald);
+                        width: 220px;
+                        padding: 18px 0;
+                        @include transition(); 
+                        opacity: 0;
+                        visibility: hidden;
+                        z-index: 9;
+                        & li{
+                            margin-right: 0px;
+                            display: block;
+                            & a{
+                                padding: 6px 28px;
+                                display: block;
+                            }
+                            & .sub-menu {
+                                left: 102%;
+                                top: 0;
+                            }
+                            &.menu-item-has-children{
+                                &:hover{
+                                    & a{
+                                        &:after{
+                                            transform: rotate(0deg);
+                                            color: var(--tp-theme-primary);
+                                        }
+                                    }
+                                }
+                                & > a{
+                                    display: flex;
+                                    align-items: center;
+                                    justify-content: space-between;
+                                    &:after{
+                                        content: "\f107";
+                                        font-size: 16px;
+                                        font-weight: 400;
+                                        margin-left: 2px;
+                                        color: var(--tp-common-mulberry);
+                                        display: inline-block;
+                                        transform: rotate(-90deg);
+                                        transition: all 0.3s 0s ease-out;
+                                        font-family: var(--tp-ff-fontawesome);
+                                    }
+                                }
+                            }
+                            &:hover{
+                                & > .sub-menu{
+                                    left: 100%;
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

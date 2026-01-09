@@ -1,0 +1,186 @@
+@use '../../utils' as *;
+
+/*----------------------------------------*/
+/*  7.8 cta css start
+/*----------------------------------------*/
+
+.#{$theme-prifix}-cta {
+    z-index: 1;
+    @media #{$lg,$xs} {
+        min-height: 530px;
+    }
+    &-title{
+        font-size: 44px;
+        letter-spacing: -0.02em;
+        color: var(--tp-common-white);
+        @media #{$xs}{
+            font-size: 35px;
+        }
+        &-2{
+            font-size: 44px;
+            letter-spacing: -0.02em;
+            @media #{$xs}{
+                font-size: 35px;
+            }
+        }
+    }
+    &-dec{
+        font-weight: 500;
+        line-height: 162%;
+        color: var(--tp-common-white);
+        @media #{$xxl,$xl,$lg,$md,$sm,$xs}{
+            & br{
+                display: none;
+            }
+        }
+        &-2{
+            line-height: 162%;
+            letter-spacing: -0.02em;
+            color: var(--tp-common-mulberry);
+            @media #{$xxl,$xl,$lg,$md,$sm,$xs}{
+                & br{
+                    display: none;
+                }
+            }
+        }
+    } 
+    &-img {
+        right: 43px;
+        bottom: 0;
+        z-index: -1;
+        @media #{$lg} {
+            text-align: center;
+        } 
+        & img{
+            @media #{$lg} {
+                max-width: 60%; 
+            } 
+            @media #{$sm} {
+                max-width: 85%; 
+            } 
+        }
+        &-2{
+            right: 0;
+            left: 0;
+            mix-blend-mode: luminosity;
+            & img{
+                mix-blend-mode: luminosity;
+            }
+        }
+    }
+    &-counter{
+        font-weight: 700;
+        font-size: 60px;
+        letter-spacing: -0.04em;
+    }
+    &-progress{
+        & .progress {
+            --bs-progress-height: 10px;
+            --bs-progress-bg: rgba(252, 248, 236, 0.1);
+        }
+    }
+    &-btn{
+        & .tp-btn{
+            padding: 23px 28px;
+            & .btn-icon {
+                margin-top: 1px;
+            }
+        }
+    }
+    &-one{
+        @media #{$xl,$lg,$md,$sm,$xs}{
+            padding-left: 30px;
+            padding-right: 30px;
+        }
+        & .tp-cta-img {
+            @media #{$xxl}{
+                width: 73%;
+            }
+            @media #{$xl,$md,$sm,$xs}{
+                width: 60%;
+            }
+        }
+    }
+    &-three{
+        & .tp-help-top{
+            @media #{$xxl,$xl,$lg,$md,$sm,$xs}{
+                padding-left: 30px;
+                padding-right: 30px;
+            }
+        }
+    }
+}
+
+.tp-help{
+    &-top{
+        @media #{$x4l} {
+            padding: 25px 30px;
+            
+        } 
+        @media #{$x3l} {
+            padding: 25px 30px;
+            
+        } 
+        @media #{$xs} {
+            padding: 25px 30px;
+            
+        } 
+        & p{
+            & br {
+                @media #{$x4l} {
+                    display: none;
+                }  
+            }  
+        }
+    }
+    &-list{
+        @media #{$x4l,$x3l,$xs} {
+            padding-right: 0;
+        } 
+        &-item{
+            display: flex;
+            margin-bottom: 14px;
+            align-items: center;
+        }
+        & span{
+            width: 26px;
+            height: 26px;
+            border-radius: 20px;
+            background: rgba(248, 243, 231, 0.1);
+            display: inline-block;
+            color: #F8F3E7;
+            text-align: center;
+            font-size: 12px;
+            margin-right: 10px;
+        }
+        & p{
+            font-size: 16px;
+            color: #F8F3E7;
+            margin: 0;
+            font-weight: 500;
+            @media #{$xxl,$xl,$lg,$md,$sm,$xs}{
+                font-size: 15px;
+            }
+        }
+    }
+    &-amount{
+        & h4{
+            color: var(--tp-common-white);
+            font-size: 16px;
+            font-weight: 600;
+            margin-bottom: 0;
+            font-family: var(--tp-ff-p);
+            & span{
+                font-weight: 400;
+            }
+        }
+    }
+    &-btn{
+        padding: 21px 34px;
+        border-radius: 0px 0px 12px 0px;
+        &:hover{
+            background-color: #fff;
+            color: #073D30;
+        }
+    }
+}

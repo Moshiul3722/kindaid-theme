@@ -1,0 +1,199 @@
+@use '../../utils' as *;
+
+/*----------------------------------------*/
+/*  7.17 service css start
+/*----------------------------------------*/
+
+.#{$theme-prifix}-service {
+    &-thumb{
+        margin-left: -12px;
+        margin-top: -140px;
+        @media #{$xxl,$lg,$md,$sm,$xs}{
+            margin-top: -125px;
+        }
+    }
+    &-icon{
+        width: 38px;
+        height: 38px;
+    }
+    &-shape{
+        position: absolute;
+        top: 0;
+        right: 0;
+        width: 12%;
+    }
+    &-item{
+        background: rgba(252, 248, 236, 0.04);
+        padding: 45px 30px 38px 34px;
+        position: relative;
+        &:hover{
+            &::before{
+                width: 100%;
+                right: 0;
+                left: auto;
+            }
+            & .tp-service-btn{
+                & .btn-text{
+                    margin-left: 0;
+                    opacity: 1;
+                    visibility: visible;
+                }
+            }
+        }
+        &::before{
+            position: absolute;
+            content: "";
+            width: 0;
+            height: 2px;
+            bottom: 0;
+            left: 0;
+            background: var(--tp-theme-secondary);
+            transition: all .4s ease;
+        }
+    }
+    &-content{
+        &-wrap{
+            margin-left: -25px;
+            @media #{$x3l,$xxl,$xl,$lg,$md,$sm,$xs}{
+                margin-left: 0;
+                padding-right: 0;
+            }
+            @media #{$xxl}{
+                margin-right: -100px;
+            }
+        }
+    }
+    &-title{
+        font-family: var(--tp-ff-body);
+        font-weight: 600;
+        font-size: 24px;
+        letter-spacing: -0.02em;
+        color: var(--tp-common-white);
+    }
+    &-dec{
+        font-weight: 500;
+        line-height: 150%;
+        letter-spacing: -0.01em;
+        color: rgba(252, 248, 236, 0.6);
+    }
+    &-btn{
+        display: inline-flex;
+        gap: 9px;
+        font-weight: 600;
+        font-size: 14px;
+        text-transform: uppercase;
+        color: var(--tp-common-white);
+        overflow: hidden;
+        transition: all .5s ease;
+        &:hover{
+            color: var(--tp-common-white);
+        }
+        & .btn-text{
+            margin-left: -96px;
+            transition: all .5s ease;
+            opacity: 0;
+            visibility: hidden;
+        }
+        & .btn-icon{
+            transform: translateY(-2px);
+        }
+    }
+    &-2{
+        &-item{
+            & .tp-service-title {
+                color: var(--tp-common-mulberry);
+            }
+            & .tp-service-dec {
+                color: var(--tp-common-mulberry);
+            } 
+        }
+        &-style{
+            & .tp-service-item{
+                padding: 45px 50px 38px 40px;
+                @media #{$xl,$lg,$md,$sm,$xs}{
+                    padding: 45px 35px 38px 40px;
+                }
+            }
+            & .tp-service-item::before {
+                display: none;
+            }
+        }
+    }
+    &-inner{
+        &-style{
+            & .tp-service-3-dec p {
+                font-size: 18px;
+            }
+            & .tp-service-3-dec {
+                bottom: -21%;
+                @media #{$xl,$lg,$md,$sm,$xs}{
+                    bottom: -35%;
+                }
+            }
+        }
+    }
+}
+
+.#{$theme-prifix}-service-3 {
+    &-item{
+        &:hover{
+            & .tp-service-3-thumb img{
+                transform: scale(1.1);
+            }
+            & .tp-service-3-dec{
+                bottom: 0;
+                & p{
+                    opacity: 1;
+                }
+            }
+        }
+    }
+    &-thumb{
+        & img{
+            transition: .6s ease;
+        }
+        &::before{
+            position: absolute;
+            content: "";
+            background: rgba(0, 0, 0, 0.4);
+            width: 100%;
+            height: 100%;
+            top: 0;
+            left: 0;
+            z-index: 1;
+        }
+    }
+    &-top{
+        position: absolute;
+        top: 0;
+        left: 0;
+        z-index: 2;
+        padding: 33px 30px 20px 29px;
+    }
+    &-dec{
+        position: absolute;
+        bottom: -26%;
+        left: 0;
+        right: 0;
+        z-index: 1;
+        padding: 25px 30px 25px 30px;
+        background: var(--tp-theme-secondary);
+        transition: all .4s ease;
+        @media #{$xl}{
+            bottom: -38%;
+        }
+        & p{
+            font-weight: 500;
+            font-size: 16px;
+            line-height: 150%;
+            color: var(--tp-common-mulberry);
+            opacity: 0;
+            transition: all .4s ease;
+            @media #{$xl,$md,$sm,$xs}{
+                & br{
+                    display: none;
+                }
+            }
+        }
+    }
+}

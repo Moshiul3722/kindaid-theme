@@ -1,0 +1,419 @@
+@use '../../utils' as *;
+
+/*----------------------------------------*/
+/*  7.4 causes css start
+/*----------------------------------------*/
+
+.#{$theme-prifix}-causes {
+    &-arrow{
+        &-wrap{
+            & button{
+                width: 54px;
+                height: 54px;
+                border: 1px solid rgba(98, 0, 53, 0.1);
+                display: inline-flex;
+                justify-content: center;
+                align-items: center;
+                color: var(--tp-common-mulberry);
+                transition: all .4s ease;
+                &:hover{
+                    background: var(--tp-common-mulberry);
+                    color: var(--tp-common-white);
+                }
+            }
+        }
+    }
+    &-dec{
+        font-weight: 500;
+        font-size: 16px;
+        line-height: 162%;
+        color: #68665e;
+    }
+    &-title{
+        font-weight: 600;
+        font-size: 24px;
+        letter-spacing: -0.02em;
+        color: var(--tp-common-mulberry);
+        font-family: var(--tp-ff-body);
+        @media #{$xxl}{
+            font-size: 22px;
+        }
+        & a{
+            &:hover{
+                color: var(--tp-theme-primary);
+            }
+        }
+    }
+    &-thumb{
+        & img{
+            transition: all .6s ease;
+        }
+    }
+    &-wrap{
+        border: 1px solid rgba(98, 0, 53, 0.06);
+        padding: 20px;
+        margin-right: -1px;
+        @media #{$xxl,$xl,$md,$xs}{
+            padding: 10px;
+        }
+        &:hover{
+            & .tp-causes-thumb{
+                & img{
+                    transform: scale(1.1);
+                }
+            }
+        }
+    }
+    &-border{
+        border-bottom: 1px solid rgba(98, 0, 53, 0.06);    
+    }
+    &-inner{
+        padding: 20px 20px 40px 20px;
+    }
+    &-amount{
+        & label{
+            font-weight: 400;
+            font-size: 16px;
+            color: var(--tp-grey-1);       
+        }
+        & span{
+            font-weight: 600;
+            color: var(--tp-common-mulberry);
+            font-size: 16px;
+        }
+        &-2{
+            & label{
+                color: #97959B;       
+            }
+            & span{
+                color: #121018;
+            }
+        }
+    }
+    &-2{
+        &-style{
+            & .tp-causes-button {
+                padding: 20px 26px 26px 26px;
+                background: #f4ecd5;
+                @media #{$xxl,$xl,$lg,$md,$sm,$xs}{
+                    padding: 20px 18px 20px 18px;
+                }
+            }
+            & .tp-causes-wrap {
+                padding: 12px;
+            }
+            & .tp-causes-inner {
+                padding: 20px 23px 25px 23px;
+                @media #{$xxl,$xl,$lg,$md,$sm,$xs}{
+                    padding: 20px 20px 25px 20px;
+                }
+            }
+        }
+    }
+    &-3{
+        &-style{
+            & .tp-causes-wrap {
+                background: var(--tp-common-white);
+            }
+            & .tp-causes-inner {
+                padding: 0 0 40px 0;
+            }
+        }
+        &-all{
+            & p{
+                font-weight: 500;
+                line-height: 162%;
+                & a{
+                    color: var(--tp-common-mulberry);
+                    display: inline-flex;
+                    border-bottom: 1px solid currentColor;
+                    line-height: 1.3;
+                    & .btn-icon {
+                        margin-top: 0;
+                    }
+                }
+            }
+        }
+    }
+    &-details{
+        margin-right: -36px;
+        @media #{$xl,$lg,$md,$sm,$xs}{
+            margin-right: 0;
+        }
+    }
+    &-quote{
+        display: flex;
+        padding-left: 50px;
+        padding-right: 83px;
+        @media #{$sm,$xs}{
+            padding-left: 0;
+            padding-right: 0;
+        }
+        & svg{
+            flex: 0 0 auto;
+            margin-right: 27px;
+        }
+        & p{
+            font-weight: 600!important;
+            font-size: 23px;
+            line-height: 139%;
+            color: var(--tp-common-mulberry);
+            @media #{$xl,$lg,$md,$sm,$xs}{
+                & br{
+                    display: none;
+                }
+            }
+        }
+    }
+}
+
+.tp-progress {
+    & .progress{
+        --bs-progress-height: 6px;
+        --bs-progress-bar-bg: #ffca24;
+        --bs-progress-bg: #e0e0d1;
+    }
+    &-top{
+        & span{
+            font-weight: 500;
+            font-size: 16px;
+            letter-spacing: -0.01em;
+            color: var(--tp-common-mulberry);
+        }
+        & label{
+            font-weight: 400;
+            font-size: 16px;
+            color: var(--tp-grey-1);
+        }
+    }
+}
+
+
+.tp-donation{
+    &-amount{
+        color: var(--tp-grey-1);
+        font-size: 16px;
+        & span{
+            color: var(--tp-theme-primary);
+            font-weight: 600;
+        }
+    }
+    &-progress-label {
+        letter-spacing: inherit;
+        font-size: 20px;
+        font-weight: 500;
+        color: var(--tp-common-mulberry);
+        font-family: var(--tp-ff-p);
+    }
+    &-progress{
+        &-number {
+            color: var(--tp-theme-primary);
+            font-size: 20px;
+            font-weight: 600;
+        }
+        & .progress, & .progress-stacked{
+            --bs-progress-height: 8px;
+            --bs-progress-bar-bg: var(--tp-theme-primary);
+            background-color: rgba(18, 16, 24, 0.08);
+        }
+    }
+    &-form{
+        margin-left: 40px;
+        margin-right: 40px;
+        border: 1px solid rgba(98, 0, 53, 0.1);
+        background: var(--tp-common-white);
+        margin-top: -130px;
+        z-index: 2;
+        position: relative;
+        @media #{$sm,$xs}{
+            margin-top: 30px;
+            margin-left: 0;
+            margin-right: 0;
+        }
+        &-wrap{
+            padding: 50px 60px 50px 60px;
+            @media #{$lg,$md,$sm} {
+                padding: 35px 40px;
+            }
+            @media #{$xs} {
+                padding: 25px 20px;
+            }
+        }
+        &-title{
+            font-size: 36px;
+        }
+        &-label-title{
+            font-size: 20px;
+            font-family: var(--tp-ff-p);
+            font-weight: 600;
+        }
+    }
+    &-filter{
+        &-input{
+            position: relative;
+        }
+        & input{
+            width: 280px;
+            height: 54px;
+            border-radius: 62px;
+            padding-left: 50px;
+            background: #f0e8d1;
+            border: none;
+            font-weight: 500;
+            font-size: 20px;
+            color: var(--tp-common-mulberry);
+            &::placeholder{
+                font-weight: 500;
+                font-size: 20px;
+                color: var(--tp-common-mulberry);
+            }
+        }
+        & label{
+            position: absolute;
+            height: 34px;
+            width: 34px;
+            background: var(--tp-theme-secondary);
+            color: var(--tp-common-mulberry);
+            text-align: center;
+            border-radius: 30px;
+            font-weight: 500;
+            line-height: 33px;
+            top: 10px;
+            left: 10px;
+            font-size: 18px;
+        }
+        &-button{
+            & button{
+                border: 1px solid rgba(98, 0, 53, 0.1);
+                border-radius: 31px;
+                line-height: 1;
+                padding: 9px 25px;
+                color: #121018;
+                margin-right: 2px;
+                font-weight: 500;
+                font-size: 16px;
+                color: var(--tp-common-mulberry);
+                &.active{
+                    background: var(--tp-theme-primary);
+                    color: var(--tp-common-white);
+                    border-color: var(--tp-theme-primary);
+                } 
+                &:hover{
+                    border-color: var(--tp-common-mulberry); 
+                }
+            }
+        }
+        &-radio{
+            border-top: 1px solid rgba(18, 16, 24, 0.08);
+            padding-top: 35px;
+            & .form-check{
+                margin-right: 20px;
+                flex: 0 0 auto;
+                padding-left: 0;
+            }
+            & .form-check-input{
+                background: none;
+                width: 20px;
+                height: 20px;
+                margin-right: 8px;
+                transform: translateY(-2px);
+                &:focus{
+                    outline: none;
+                    border: none;
+                    box-shadow: none;
+                }
+            }
+            & .form-check-input:checked {
+                background-color: var(--tp-theme-primary);
+                border-color: var(--tp-theme-primary);
+            }
+            & label{
+                font-size: 16px;
+                color: var(--tp-common-mulberry);
+                cursor: pointer;
+            }
+        }
+    }
+    &-offline{
+        & p{
+            font-size: 16px;
+            line-height: 28px;
+        }
+        & {
+            & ol{
+                padding-left: 20px;
+                & li{
+                    font-size: 16px;
+                    line-height: 28px;
+                }
+            }
+        }
+    }
+    &-social{
+        &-title{
+            font-family: var(--tp-ff-p);
+            font-weight: 500;
+            font-size: 14px;
+            color: var(--tp-common-mulberry);
+        }
+        & .tp-footer-social a {
+            color: var(--tp-common-mulberry);
+            background: var(--tp-common-emerald);
+            &:hover{
+                background: var(--tp-theme-primary);
+                color: var(--tp-common-white);
+            }
+        }
+    }
+    &-info{
+        &-wrap{
+            margin: 55px 100px 30px 100px;
+            @media #{$xl,$md,$sm,$xs}{
+                margin: 55px 50px 30px 50px;
+            }
+            @media #{$sm,$xs}{
+                margin: 55px 0 30px 0;
+            }
+            & p{
+                font-weight: 500;
+            }
+        }
+    }
+    &-reply{
+        &-form{
+            padding: 55px 50px 50px 50px;
+            border: 1px solid rgba(98, 0, 53, 0.1);
+            @media #{$sm,$xs}{
+                padding: 35px 20px 30px 20px;
+            }
+        }
+    }
+}
+p.tp-donation-notice {
+	font-size: 15px;
+    font-weight: 500;
+    & span {
+        border-radius: 16px;
+        background: rgba(255, 207, 78, 0.4);
+        font-size: 13px;
+        font-weight: 500;
+        color: var(--tp-common-mulberry);
+        padding: 6px 12px;
+        display: inline-block;
+        line-height: 1;
+        margin-right: 8px;
+    }
+}
+
+.tp-donation-form{
+    &-main{
+        border: 1px solid rgba(98, 0, 53, 0.1);
+        padding: 80px 100px 75px 100px;
+        @media #{$xl,$lg,$md,$sm}{
+            padding: 50px 50px 45px 50px;
+        }
+        @media #{$xl,$lg,$md,$sm,$xs}{
+            padding: 30px 20px 25px 20px;
+        }
+    }
+}

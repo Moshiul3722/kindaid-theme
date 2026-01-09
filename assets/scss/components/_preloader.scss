@@ -1,0 +1,41 @@
+@use '../utils' as *;
+
+/*----------------------------------------*/
+/*  2.9 Preloader
+/*----------------------------------------*/
+
+.preloader{
+	position: fixed;
+	top: 0;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	z-index: 99999;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+    background: var(--tp-common-white);
+}
+.loader {
+    width: fit-content;
+    font-size: 120px;
+    line-height: 1.5;
+    font-family: var(--tp-ff-heading);
+    font-weight: 800;
+    text-transform: uppercase;
+    color: #0000;
+    -webkit-text-stroke: 1px #FF4121;
+    background:
+    radial-gradient(1.13em at 50% 1.6em,#FF4121 99%,#0000 101%) calc(50% - 1.6em) 0/3.2em 100% text,
+    radial-gradient(1.13em at 50% -0.8em,#0000 99%,#FF4121 101%) 50% .8em/3.2em 100% repeat-x  text;
+    animation: l9 2s linear infinite;
+    @media #{$xs} {
+        font-size: 70px;
+    }
+  }
+  .loader:before {
+    content: "Kindaid";
+  }
+  @keyframes l9 {
+    to {background-position: calc(50% + 1.6em) 0,calc(50% + 3.2em) .8em}
+}

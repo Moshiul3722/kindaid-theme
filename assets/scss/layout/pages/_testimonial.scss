@@ -1,0 +1,140 @@
+@use '../../utils' as *;
+
+/*----------------------------------------*/
+/*  7.20 testimonal css start
+/*----------------------------------------*/
+
+.#{$theme-prifix}-testimonal {
+    &-dec{
+        font-weight: 400;
+        font-size: 30px;
+        line-height: 133%;
+        @media #{$xs} {
+            font-size: 17px;
+        }
+        @media #{$lg,$md,$sm,$xs}{
+            & br{
+                display: none;
+            }
+        }
+    }
+    &-label{
+        color: var(--tp-common-mulberry);
+        font-size: 16px;
+    }
+    &-star{
+        color: #FFA72C;
+        font-size: 13px;
+    }
+    &-name{
+        font-family: var(--tp-ff-p);
+        font-weight: 600;
+        font-size: 18px;
+        margin: 0;
+        line-height: 1;
+    }
+    &-user{
+        display: flex;
+        justify-content: center;
+        text-align: left;
+        align-items: center;
+    }
+    &-img{
+        margin-right: 12px;
+        & img{
+            width: 50px;
+            height: 50px;
+            border-radius:100%;
+        }
+    }
+    &-bio{
+       & span{
+        color: #6E6B76;
+        font-size: 14px;
+       }     
+    }
+    &-3{
+        &-pagination{
+            display: flex;
+            gap: 8px;
+            & span{
+                opacity: 1;
+                border: 1px solid rgba(252, 248, 236, 0.3);
+                border-radius: 12px;
+                width: 10px;
+                height: 10px;
+                background: transparent;
+                &.swiper-pagination-bullet-active{
+                    background: var(--tp-theme-secondary);
+                    transform: scale(1.1);
+                }
+            }
+        }
+        &-style{
+            & .tp-testimonal-dec {
+                font-size: 28px;
+                line-height: 143%;
+                @media #{$xs}{
+                    font-size: 22px;
+                }
+            }
+            & .tp-testimonal-user {
+                justify-content: flex-start;
+            }
+            & .tp-testimonal-name {
+                color: var(--tp-common-white);
+            }
+            & .tp-testimonal-bio span {
+                color: rgba(255, 255, 255, 0.7);
+            }
+            & .tp-about-2-thumb {
+                width: 41%;
+                @media #{$lg,$md,$sm,$xs}{
+                    width: 100%;
+                }
+            }
+            & .tp-about-2-content-inner {
+                margin-left: -20px;
+                @media #{$lg,$md,$sm,$xs}{
+                    margin-left: 0;
+                }
+            }
+            & .tp-testimonal-img img {
+                width: 60px;
+                height: 60px;
+            }
+            & .tp-about-2-content-wrap{
+                @media #{$lg,$md,$sm,$xs}{
+                    padding-top: 90px;
+                    padding-bottom: 90px;
+                }
+            }
+        }
+    }
+}
+
+.tp-test-arrow {
+	height: 54px;
+	width: 54px;
+	border: 1px solid var(--tp-common-mulberry);
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	position: absolute;
+	top: 60%;
+	transform: translateY(-50%);
+	left: 15px;
+    z-index: 9;
+    color: var(--tp-common-mulberry);
+    @media #{$md,$sm,$xs}{
+        top: 100%;
+    }
+    &:hover{
+        background-color: var(--tp-common-mulberry);
+        color: var(--tp-common-white);
+    }
+}
+.tp-test-arrow-next.tp-test-arrow {
+	left: auto;
+	right: 15px;
+}

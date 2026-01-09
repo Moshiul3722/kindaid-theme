@@ -1,0 +1,43 @@
+@use '../utils' as *;
+
+/*----------------------------------------*/
+/*  2.12 Section Title
+/*----------------------------------------*/
+
+.#{$theme-prifix}-section {
+    &-subtitle{
+        font-weight: 400;
+        font-size: 18px;
+        letter-spacing: -0.01em;
+        color: var(--tp-theme-primary);
+        font-family: var(--tp-ff-heading);
+        &-yellow{
+            color: var(--tp-theme-secondary);
+        }
+    }
+    &-title{
+        @media #{$xl,$lg,}{
+            font-size: 48px;
+        }
+        @media #{$md,$sm,$xs}{
+            font-size: 42px;
+            & br{
+                display: none;
+            }
+        }
+        @media #{$xs}{
+            font-size: 35px;
+        }
+        & span{
+            color: var(--tp-theme-primary);
+        }
+        &-white{
+            color: var(--tp-common-white);
+        }
+    }
+    &-dec{
+        font-weight: 500;
+        font-size: 18px;
+        line-height: 156%;
+    }
+}

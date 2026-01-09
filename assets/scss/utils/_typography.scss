@@ -1,0 +1,20 @@
+// font url
+
+$font-url: 'https://fonts.googleapis.com/css2?family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet';
+
+// font family
+$font-family: (
+    'ff': (
+        'body': "'Montserrat', sans-serif",
+        'heading': "'Libre Baskerville', serif",
+        'p': "'Montserrat', sans-serif",
+        'fontawesome': '"Font Awesome 6 Pro"',
+    )
+);
+// font size
+$font-size: (
+    'fz': (
+        'body': 14px,
+        'p': 16px,
+    )
+);

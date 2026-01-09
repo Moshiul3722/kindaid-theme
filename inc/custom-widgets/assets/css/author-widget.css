@@ -1,0 +1,9 @@
+.repeater-item {
+  margin-bottom: 8px;
+  display: flex;
+  gap: 8px;
+}
+
+.repeater-item input {
+  flex: 1;
+}

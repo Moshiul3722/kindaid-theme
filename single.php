@@ -1,0 +1,38 @@
+<?php
+
+/**
+ * Main template file.
+ * 
+ * @package KindAid
+ */
+
+?>
+
+<?php get_header() ?>
+
+
+<!-- tp-blog-sidebar-area-start -->
+<div class="tp-blog-post-area pt-120 pb-80">
+    <div class="container container-1424">
+        <div class="row">
+            <div class="col-xl-9 col-lg-8">
+                <div class="tp-postbox-wrapper tp-postbox-details-wrap mr-85 mb-40">
+                    <?php if (have_posts()) : while (have_posts()) : the_post(); ?>
+                            <?php echo get_template_part('templates/content', get_post_format()) ?>
+                        <?php endwhile; ?>
+                    <?php else: ?>
+                        <p><?php _e('Sorry, no posts matched your criteria.0000'); ?></p>
+                    <?php
+                    endif; ?>
+                </div>
+            </div>
+            <div class="col-xl-3 col-lg-4">
+                <div class="tp-blog-sidebar mb-40">
+                    <?php get_sidebar() ?>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- tp-blog-sidebar-area-end -->
+<?php get_footer(); ?>

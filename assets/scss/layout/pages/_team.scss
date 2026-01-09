@@ -1,0 +1,185 @@
+@use '../../utils' as *;
+
+/*----------------------------------------*/
+/*  7.19 team css start
+/*----------------------------------------*/
+
+.#{$theme-prifix}-team {
+    &-item{
+        background: #f0e8d1;
+        padding: 44px 20px 30px 20px;
+        &:hover{
+            & .tp-team-thumb{
+                & img{
+                    transform: scale(1.1);
+                }
+            }
+        }
+    }
+    &-thumb{
+        border-radius: 100%;
+        overflow: hidden;
+        display: inline-block;
+        & img{
+            border-radius: 100%;
+            width: 200px;
+            transition: all .6s ease;
+        }
+    }
+    &-content{
+        & span{
+            font-weight: 500;
+            font-size: 13px;
+            letter-spacing: -0.01em;
+            text-transform: uppercase;
+            color: rgba(98, 0, 53, 0.6);
+        }
+    }
+    &-title{
+        font-weight: 700;
+        font-size: 22px;
+        letter-spacing: -0.02em;
+        color: var(--tp-common-mulberry);
+        @media #{$lg,$md,$sm,$xs}{
+            font-size: 20px;
+        }
+        & a{
+            &:hover{
+                color: var(--tp-theme-primary);
+            }
+        }
+    }
+    &-social{
+        & a{
+            height: 40px;
+            width: 40px;
+            display: inline-block;
+            border-radius: 30px;
+            line-height: 37px;
+            color: #5A5860;
+            @include transition();
+            margin: 0 -2px;
+            color: rgba(98, 0, 53, 0.5);
+            &:hover{
+                background: var(--tp-common-mulberry);
+                color: #fff;
+            }
+        }
+    }
+    &-details{
+        &-bg{
+            padding: 80px;
+            padding-bottom: 40px;
+            @media #{$lg,$md,$sm,$xs} {
+                padding: 30px;
+                padding-bottom: 0px;
+            }
+        }
+        &-thumb{
+            & img{
+                width: 340px;
+                height: 340px;
+                border-radius: 100%;
+                @media #{$lg,$sm,$xs} {
+                    width: 100%;
+                    height: 100%;
+                }
+            }
+        }
+        &-text{
+            & p{
+                font-weight: 500;
+            }
+        }
+        &-title{
+           font-size: 40px; 
+           margin-bottom: 10px;
+        }
+        & p{
+            font-weight: 500;
+        }
+        & ul {
+            & li{
+                list-style: none;
+                font-size: 16px;
+                font-weight: 500;
+                & span{
+                    color: var(--tp-common-mulberry);
+                    min-width: 150px;
+                    display: inline-block;
+                    margin-bottom: 7px;
+                    @media #{$xs} {
+                        min-width: inherit;
+                    }
+                }
+            }
+        }
+        &-social{
+            & a{
+                height: 40px;
+                width: 40px;
+                border-radius: 100px;
+                display: inline-block;
+                text-align: center;
+                line-height: 38px;
+                margin: 0 0px;
+                box-shadow: 0 1px 3px 0 rgba(22, 18, 5, 0.08);
+                background: var(--tp-common-white);
+                color: var(--tp-common-mulberry);
+                &:hover{
+                    background-color: var(--tp-theme-primary);
+                    color: var(--tp-common-white);
+                }
+            }
+        }
+    }
+    &-skill{
+        &-title{
+            letter-spacing: inherit;
+            font-size: 17px;
+            color: var(--tp-common-mulberry);
+            font-weight: 500;
+            font-family: var(--tp-ff-p);
+        }
+        & .tpprogress-2 .progress {
+            --bs-progress-height: 8px;
+            --bs-progress-bar-bg: var(--tp-secondary-color);
+            --bs-progress-bg: #f1f1f1;
+        }
+    }
+    &-join{
+        @media #{$md,$xs} {
+            padding-bottom: 0;
+        } 
+        @media #{$lg} {
+            padding-left: 40px;
+        }
+        @media #{$sm,$xs} {
+            padding-left: 15px;
+        }
+    }        
+}
+
+.tp-progress-2 {
+    & .progress{
+        --bs-progress-height: 8px;
+        --bs-progress-bar-bg: #FE4E15;
+        --bs-progress-bg: rgba(18, 16, 24, 0.08);
+    }
+    & label{
+        background: none;
+        font-size: 16px;
+        font-weight: 600;
+        color: var(--tp-common-mulberry);
+        transform: inherit;
+        display: block;
+        padding: 0;
+        margin: 0;
+        margin-bottom: 0px;
+        margin-bottom: 5px;
+        text-align: right;
+        &::before{
+            display: none;
+        }
+    }
+}

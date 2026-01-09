@@ -1,0 +1,252 @@
+@use '../../utils' as *;
+
+/*----------------------------------------*/
+/*  7.1 about css start
+/*----------------------------------------*/
+
+.#{$theme-prifix}-about {
+    &-dec{
+        border-right: 1px solid rgba(98, 0, 53, 0.06);
+        padding-top: 45px;
+        padding-right: 49px;
+        @media #{$xs}{
+            border: none;
+            padding-right: 0;
+        }
+        &-wrap{
+            border-top: 1px solid rgba(98, 0, 53, 0.06);
+        }
+        & p{
+            font-weight: 500;
+            font-size: 18px;
+            line-height: 156%;
+            color: #68665e;
+        }
+    }
+    &-user{
+        padding-top: 45px;
+        @media #{$xs}{
+            padding-left: 0;
+        }
+        & h4{
+            font-family: var(--tp-ff-p);
+            font-weight: 600;
+            font-size: 34px;
+        }
+        & p{
+            font-weight: 500;
+            font-size: 15px;
+            line-height: 147%;
+            color: var(--tp-grey-1);
+        }
+    }
+    &-thumb{
+        @media #{$xl,$lg,$md,$sm,$xs}{
+            margin-right: 0;
+        }
+        & img{
+            height: 100%;
+            object-fit: cover;
+        }
+    }
+    &-list{
+        display: flex;
+        &-icon {
+            flex: 0 0 auto;
+            margin-right: 22px;
+        }
+        &-title {
+            font-size: 24px;;
+            letter-spacing: -0.02em;
+            color: var(--tp-common-white);
+            font-family: var(--tp-ff-p);
+        }
+        &-text{
+            & p{
+                font-weight: 500;
+                line-height: 169%;
+                color: rgba(252, 248, 236, 0.6);
+            }
+        }
+    }
+    &-content{
+        @media #{$x4l,$x3l,$xxl,$xl,$lg,$md,$sm,$xs}{
+            margin-right: 0;
+        }
+        @media #{$xl,$lg,$md,$sm,$xs}{
+            margin-right: 12px;
+        }
+        @media #{$lg,$md,$sm,$xs}{
+            margin-left: 12px;
+        }
+    }
+    &-2{
+        &-map{
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+        }
+        &-content{
+            &-inner{
+                position: relative;
+                z-index: 1;
+                @media #{$x3l,$xxl,$xl,$lg,$md,$sm,$xs}{
+                    margin-right: 0;
+                }
+                @media #{$xxl}{
+                    margin-left: -50px;
+                    margin-right: -100px;
+                }
+            }
+            &-wrap{
+                @media #{$lg,$md,$sm,$xs}{
+                    margin-left: 0;
+                    padding-left: 12px;
+                    padding-right: 12px;
+                }
+            }
+        }
+        &-dec{
+            font-weight: 500;
+            font-size: 18px;
+            line-height: 156%;
+            color: rgba(252, 248, 236, 0.6);
+        }
+        &-thumb{
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            left: 70px;
+            z-index: 2;
+            width: 46%;
+            height: 700px;
+            @media #{$x3l,$xxl,$xl,$lg,$md,$sm,$xs}{
+                left: 0;
+            }
+            @media #{$lg,$md,$sm,$xs}{
+                position: inherit;
+                height: auto;
+                width: 100%;
+                top: auto;
+                transform: inherit;
+            }
+            & img{
+                width: 100%;
+                height: 100%;
+                object-fit: cover;
+            }
+        }
+        &-text{
+            @media #{$xxl}{
+                margin-left: -50px;
+                margin-right: -50px;
+            }
+        }
+    }
+}
+
+.#{$theme-prifix}-about-3 {
+    @media #{$xl}{
+        margin-left: 50px;
+    }
+    @media #{$lg,$md,$sm,$xs}{
+        margin-left: 0;
+    }
+    &-list{
+        &-text{
+            font-weight: 500;
+            font-size: 16px;
+            color: var(--tp-common-mulberry);
+        }
+        &-icon{
+            transform: translateY(-2px);
+        }
+    }
+    &-support{
+        &-icon{
+            border: 1px solid rgba(98, 0, 53, 0.1);
+            border-radius: 58px;
+            width: 60px;
+            height: 60px;
+            display: inline-flex;
+            justify-content: center;
+            align-items: center;
+            flex: 0 0 auto;
+        }
+        &-title{
+            font-weight: 600;
+            font-size: 20px;
+            letter-spacing: -0.02em;
+            color: var(--tp-common-mulberry);
+        }
+        &-dec{
+            & p{
+                font-weight: 500;
+                font-size: 15px;
+                letter-spacing: -0.01em;
+            }
+        }
+        &-wrap{
+            background: var(--tp-common-emerald);
+            padding: 20px 20px 0px 20px;
+        }
+    }
+    &-contact{
+        &-icon{
+            border-radius: 62px;
+            width: 56px;
+            height: 56px;
+            background: var(--tp-theme-secondary);
+        }
+        & span{
+            font-weight: 500;
+            letter-spacing: -0.01em;
+        }
+        & a{
+            font-weight: 600;
+            font-size: 20px;
+            color: var(--tp-common-mulberry);
+        }
+    }
+    &-thumb{
+        &-2{
+            position: absolute;
+            top: 60px;
+            left: -37px;
+            @media #{$md,$sm,$xs}{
+                left: 0;
+            }
+            @media #{$sm,$xs}{
+                display: none;
+            }
+        }
+        &-3{
+            position: absolute;
+            border: 6px solid #fcf8ec;
+            top: 180px;
+            left: -120px;
+            @media #{$md,$sm,$xs}{
+                left: 0;
+            }
+            @media #{$sm,$xs}{
+                display: none;
+            }
+        }
+        &-shape{
+            position: absolute;
+            bottom: 60px;
+            left: -40px;
+            @media #{$md,$sm,$xs}{
+                left: 0;
+            }
+            @media #{$xl,$lg,$md,$sm,$xs}{
+                bottom: 30px;
+            }
+            @media #{$sm,$xs}{
+                display: none;
+            }
+        }
+    }
+}

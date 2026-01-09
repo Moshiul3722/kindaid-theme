@@ -1,0 +1,5 @@
+//--office-pc--//
+sass --watch "C:\Users\Admin\Dropbox\Harun Pure\kindaid\assets\scss\main.scss":"C:\Users\Admin\Dropbox\Harun Pure\kindaid\assets\css\main.css"
+
+//--house-pc--//
+sass --watch "C:\Users\Office PC 08\Desktop\Dropbox\Harun Pure\kindaid\assets\scss\main.scss":"C:\Users\Office PC 08\Desktop\Dropbox\Harun Pure\kindaid\assets\css\main.css"
