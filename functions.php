@@ -269,3 +269,44 @@ function wib_sidebar_donate_banner_widget()
     register_widget('WIB_Sidebar_Donate_Banner');
 }
 add_action('widgets_init', 'wib_sidebar_donate_banner_widget');
+
+
+function fix_elementor_dependencies()
+{
+    if (wp_script_is('elementor-v2-editor-interactions', 'registered')) {
+        $script = wp_scripts()->registered['elementor-v2-editor-interactions'];
+
+        // Remove the problematic dependencies
+        $script->deps = array_diff($script->deps, array(
+            'elementor-v2-editor-controls',
+            'elementor-v2-editor-elements'
+        ));
+    }
+}
+add_action('wp_print_scripts', 'fix_elementor_dependencies', 100);
+
+add_action('wp_print_scripts', 'fix_elementor_v2_dependencies', 100);
+function fix_elementor_v2_dependencies()
+{
+    // Fix elementor-v2-editor-interactions
+    if (wp_script_is('elementor-v2-editor-interactions', 'registered')) {
+        $script = wp_scripts()->registered['elementor-v2-editor-interactions'];
+        $script->deps = array_diff($script->deps, array(
+            'elementor-v2-editor-controls',
+            'elementor-v2-editor-elements'
+        ));
+    }
+
+    // Fix elementor-v2-editor-components
+    if (wp_script_is('elementor-v2-editor-components', 'registered')) {
+        $script = wp_scripts()->registered['elementor-v2-editor-components'];
+        $script->deps = array_diff($script->deps, array(
+            'elementor-v2-editor-canvas',
+            'elementor-v2-editor-controls',
+            'elementor-v2-editor-editing-panel',
+            'elementor-v2-editor-elements',
+            'elementor-v2-editor-props',
+            'elementor-v2-editor-styles-repository'
+        ));
+    }
+}
